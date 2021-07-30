@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,count=0,a,d[1000],sum=0;
+    double average=0;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        scanf("%d",&a);
+        for(int i=0;i<a;i++)
+        {
+            scanf("%d",&d[i]);
+            sum+=d[i];
+        }
+        average=(double)sum/a;
+        for(int i=0;i<a;i++)
+        {
+            if(d[i]>average)
+                count++;
+        }
+        printf("%.3f%%\n",(double)count*100/a);
+        n--;
+        count = 0;
+        average = 0;
+        sum = 0;
+    }
+}

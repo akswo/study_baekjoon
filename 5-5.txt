@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+	int n,d[1000],max=0;
+	scanf("%d",&n);
+	for (int i = 1; i <= n; i++)
+	{
+		scanf("%d",&d[i]);
+		if (d[i] > max)
+		{
+			max = d[i];
+		}
+	}
+	float k[1000], p=0;
+	for (int i = 1; i <= n; i++)
+	{
+		k[i] =(float) d[i] / max * 100;
+	}
+	for (int i = 1; i <= n; i++)
+	{
+		p += k[i];
+	}
+	printf("%f", p/n);
+}
